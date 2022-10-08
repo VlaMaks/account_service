@@ -9,6 +9,9 @@ import javax.persistence.*;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 
 @Entity
 @Table(name = "users")
@@ -41,10 +44,24 @@ public class User {
     @NotNull
     private String password;
 
-    @Column(name = "role")
+    /*@Column(name = "role")
     @Enumerated(value = EnumType.STRING)
-    @JsonIgnore
-    private Role role;
+    @JsonIgnore*/
+
+    @ElementCollection
+    //@NotNull
+   //@JsonIgnore
+    private Set<Role> roles;
+
+    /*@ManyToMany(cascade = {
+            CascadeType.PERSIST,
+            CascadeType.MERGE
+    })
+    @JoinTable(name = "user_groups",
+            joinColumns =@JoinColumn(name = "customer_id"),
+            inverseJoinColumns = @JoinColumn(name = "group_id"
+            ))
+    private Set<Group> userGroups= new HashSet<>();*/
 
     @Enumerated(value = EnumType.STRING)
     @JsonIgnore
@@ -93,16 +110,16 @@ public class User {
         this.password = password;
     }
 
-    public Role getRole() {
-        return role;
+    public Set<Role> getRoles() {
+        return roles;
     }
 
     public Status getStatus() {
         return status;
     }
 
-    public void setRole(Role role) {
-        this.role = role;
+    public void setRole(Set<Role> roles) {
+        this.roles = roles;
     }
 
     public void setStatus(Status status) {
@@ -126,4 +143,6 @@ public class User {
                 ", password='" + password + '\'' +
                 '}';
     }
+
+
 }

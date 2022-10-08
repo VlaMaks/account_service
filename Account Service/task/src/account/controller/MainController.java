@@ -10,6 +10,7 @@ import account.service.UserService;
 import account.validation.UserPasswordValidator;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.bind.annotation.*;
@@ -79,6 +80,23 @@ public class MainController {
             throw new ResponseStatusException(HttpStatus.BAD_REQUEST, ex.getMessage());
         }
         return new ResponseEntity<>(Map.of("status", "Updated successfully!") ,HttpStatus.OK);
+    }
+
+    @PutMapping("/api/admin/user/role")
+    public ResponseEntity<User> changeRole(@RequestBody Map<String, String> req) {
+        ResponseEntity<User> responseEntity = null;
+        try {
+            responseEntity = new ResponseEntity<>(userService.changeRole(req), HttpStatus.OK);
+        } catch (Exception ex) {
+            HttpStatus status = null;
+            if (ex.getMessage().contains("not found")) {
+                status = HttpStatus.NOT_FOUND;
+            } else {
+                status = HttpStatus.BAD_REQUEST;
+            }
+            throw new ResponseStatusException(status, ex.getMessage());
+        }
+        return responseEntity;
     }
 
     @GetMapping("/api/auth/changepass")
