@@ -11,11 +11,8 @@ import java.util.Collection;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 public class SecurityUser implements UserDetails {
-
     private final String userName;
     private final String password;
     private final List<SimpleGrantedAuthority> authorities;
@@ -64,7 +61,7 @@ public class SecurityUser implements UserDetails {
     }
 
     public static UserDetails fromUser(User user) {
-       Set<Role> roles = user.getRoles();
+       List<Role> roles = user.getRoles();
        Set<SimpleGrantedAuthority> grantedAuthorities = new HashSet<>();
        for (Role role : roles) {
            grantedAuthorities.addAll(role.getAuthorities());

@@ -1928,6 +1928,12 @@ files:
 - name: src/account/entity/Group.java
   visible: true
   learner_created: true
+- name: src/account/exception/CustomAccessDeniedHandler.java
+  visible: true
+  learner_created: true
 feedback_link: https://hyperskill.org/learn/step/16605#comment
-status: Unchecked
-record: -1
+status: Solved
+feedback:
+  message: Congratulations!
+  time: Sun, 09 Oct 2022 10:54:01 UTC
+record: 5

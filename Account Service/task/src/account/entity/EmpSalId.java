@@ -13,20 +13,13 @@ import java.util.Objects;
 
 
 public class EmpSalId implements Serializable {
-
     @Column(name = "employee", nullable = false)
     private String employee;
-
     @Column(name = "period", nullable = false)
-    /*@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "MM-yyyy")
-    @JsonDeserialize(using = LocalDateDeserializer.class)
-    @JsonSerialize(using = LocalDateSerializer.class)*/
     private String period;
 
     public EmpSalId() {
     }
-
-
     public EmpSalId(String employee, String period) {
         this.employee = employee;
         this.period = period;
@@ -43,7 +36,6 @@ public class EmpSalId implements Serializable {
     public String getPeriod() {
         return period;
     }
-
 
     public void setPeriod(String period) {
         this.period = period;

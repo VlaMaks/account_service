@@ -8,6 +8,7 @@ import java.util.stream.Collectors;
 public enum Role {
     ROLE_USER(Set.of(Permission.CHANGE_PASS, Permission.READ_PAYMENT)),
     ROLE_ADMINISTRATOR(Set.of(Permission.CHANGE_PASS, Permission.MANAGE_USER)),
+    ROLE_AUDITOR(Set.of(Permission.CHANGE_PASS, Permission.READ_SECURITY_EVENTS)),
     ROLE_ACCOUNTANT(Set.of(Permission.CHANGE_PASS, Permission.READ_PAYMENT, Permission.WRITE_PAYMENT));
 
     private final Set<Permission> permissions;

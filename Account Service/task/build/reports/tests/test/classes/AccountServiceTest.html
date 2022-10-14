@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">57.498s</div>
+<div class="counter">19.914s</div>
 <p>duration</p>
 </div>
 </td>
@@ -79,7 +79,7 @@
 </thead>
 <tr>
 <td class="success">start</td>
-<td class="success">57.498s</td>
+<td class="success">19.914s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -89,252 +89,40 @@
 <span class="code">
 <pre>?[1;31m
 Start test 1?[0m
-
-  .   ____          _            __ _ _
- /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
-( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
- \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
-  '  |____| .__|_| |_|_| |_\__, | / / / /
- =========|_|==============|___/=/_/_/_/
- :: Spring Boot ::                (v2.7.3)
-
-2022-10-05 20:25:15.295  INFO 6388 --- [    Test worker] account.AccountServiceApplication        : Starting AccountServiceApplication using Java 17.0.2 on Home-PC with PID 6388 (started by Home in D:\JetBrains Academy\new\Account Service\Account Service\task)
-2022-10-05 20:25:15.302  INFO 6388 --- [    Test worker] account.AccountServiceApplication        : No active profile set, falling back to 1 default profile: &quot;default&quot;
-2022-10-05 20:25:17.907  INFO 6388 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-10-05 20:25:18.041  INFO 6388 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 119 ms. Found 2 JPA repository interfaces.
-2022-10-05 20:25:19.560  INFO 6388 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 28852 (http)
-2022-10-05 20:25:19.579  INFO 6388 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-10-05 20:25:19.581  INFO 6388 --- [    Test worker] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
-2022-10-05 20:25:19.816  INFO 6388 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-10-05 20:25:19.816  INFO 6388 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4354 ms
-2022-10-05 20:25:20.098  INFO 6388 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-10-05 20:25:20.537  INFO 6388 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-10-05 20:25:20.563  INFO 6388 --- [    Test worker] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:../service_db'
-2022-10-05 20:25:21.366  INFO 6388 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-10-05 20:25:21.467  INFO 6388 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.10.Final
-2022-10-05 20:25:22.134  INFO 6388 --- [    Test worker] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2022-10-05 20:25:22.398  INFO 6388 --- [    Test worker] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-2022-10-05 20:25:23.878  INFO 6388 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-10-05 20:25:23.892  INFO 6388 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-10-05 20:25:25.030  INFO 6388 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@55b78dad, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@47f4dc8d, org.springframework.security.web.context.SecurityContextPersistenceFilter@81a56b2, org.springframework.security.web.header.HeaderWriterFilter@260043d, org.springframework.security.web.authentication.logout.LogoutFilter@65293ca5, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@1d01fa0c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2530baf6, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1e7797db, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@689fcf08, org.springframework.security.web.session.SessionManagementFilter@6b8cdc4, org.springframework.security.web.access.ExceptionTranslationFilter@21399e53, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@341141ab]
-2022-10-05 20:25:25.154  WARN 6388 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-10-05 20:25:26.138  INFO 6388 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
-2022-10-05 20:25:26.284  INFO 6388 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 28852 (http) with context path ''
-2022-10-05 20:25:26.316  INFO 6388 --- [    Test worker] account.AccountServiceApplication        : Started AccountServiceApplication in 12.068 seconds (JVM running for 14.025)
-2022-10-05 20:25:26.892  INFO 6388 --- [io-28852-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-10-05 20:25:26.894  INFO 6388 --- [io-28852-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-10-05 20:25:26.900  INFO 6388 --- [io-28852-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
-2022-10-05 20:25:27.197  WARN 6388 --- [io-28852-exec-2] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity&lt;java.lang.Object&gt; account.controller.MainController.signupUser(account.entity.User): [Field error in object 'user' on field 'name': rejected value []; codes [NotBlank.user.name,NotBlank.name,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [user.name,name]; arguments []; default message [name]]; default message [must not be blank]] ]
-?[1;31m
-Start test 2?[0m
-2022-10-05 20:25:27.284  WARN 6388 --- [io-28852-exec-4] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity&lt;java.lang.Object&gt; account.controller.MainController.signupUser(account.entity.User) with 2 errors: [Field error in object 'user' on field 'name': rejected value [null]; codes [NotNull.user.name,NotNull.name,NotNull.java.lang.String,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [user.name,name]; arguments []; default message [name]]; default message [must not be null]] [Field error in object 'user' on field 'name': rejected value [null]; codes [NotBlank.user.name,NotBlank.name,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [user.name,name]; arguments []; default message [name]]; default message [must not be blank]] ]
-?[1;31m
-Start test 3?[0m
-2022-10-05 20:25:27.332  WARN 6388 --- [io-28852-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity&lt;java.lang.Object&gt; account.controller.MainController.signupUser(account.entity.User): [Field error in object 'user' on field 'lastName': rejected value []; codes [NotBlank.user.lastName,NotBlank.lastName,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [user.lastName,lastName]; arguments []; default message [lastName]]; default message [must not be blank]] ]
-?[1;31m
-Start test 4?[0m
-2022-10-05 20:25:27.352  WARN 6388 --- [io-28852-exec-3] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity&lt;java.lang.Object&gt; account.controller.MainController.signupUser(account.entity.User) with 2 errors: [Field error in object 'user' on field 'lastName': rejected value [null]; codes [NotBlank.user.lastName,NotBlank.lastName,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [user.lastName,lastName]; arguments []; default message [lastName]]; default message [must not be blank]] [Field error in object 'user' on field 'lastName': rejected value [null]; codes [NotNull.user.lastName,NotNull.lastName,NotNull.java.lang.String,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [user.lastName,lastName]; arguments []; default message [lastName]]; default message [must not be null]] ]
-?[1;31m
-Start test 5?[0m
-2022-10-05 20:25:27.380  WARN 6388 --- [io-28852-exec-6] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity&lt;java.lang.Object&gt; account.controller.MainController.signupUser(account.entity.User) with 2 errors: [Field error in object 'user' on field 'email': rejected value []; codes [Email.user.email,Email.email,Email.java.lang.String,Email]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [user.email,email]; arguments []; default message [email],[Ljavax.validation.constraints.Pattern$Flag;@5009e267,^[a-zA-Z0-9_.+-]+@acme.com]; default message [must be a well-formed email address]] [Field error in object 'user' on field 'email': rejected value []; codes [NotBlank.user.email,NotBlank.email,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [user.email,email]; arguments []; default message [email]]; default message [must not be blank]] ]
-?[1;31m
-Start test 6?[0m
-2022-10-05 20:25:27.399  WARN 6388 --- [io-28852-exec-5] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity&lt;java.lang.Object&gt; account.controller.MainController.signupUser(account.entity.User) with 2 errors: [Field error in object 'user' on field 'email': rejected value [null]; codes [NotNull.user.email,NotNull.email,NotNull.java.lang.String,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [user.email,email]; arguments []; default message [email]]; default message [must not be null]] [Field error in object 'user' on field 'email': rejected value [null]; codes [NotBlank.user.email,NotBlank.email,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [user.email,email]; arguments []; default message [email]]; default message [must not be blank]] ]
-?[1;31m
-Start test 7?[0m
-2022-10-05 20:25:27.418  WARN 6388 --- [io-28852-exec-7] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity&lt;java.lang.Object&gt; account.controller.MainController.signupUser(account.entity.User): [Field error in object 'user' on field 'password': rejected value []; codes [NotBlank.user.password,NotBlank.password,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [user.password,password]; arguments []; default message [password]]; default message [must not be blank]] ]
-?[1;31m
-Start test 8?[0m
-2022-10-05 20:25:27.442  WARN 6388 --- [io-28852-exec-8] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity&lt;java.lang.Object&gt; account.controller.MainController.signupUser(account.entity.User) with 2 errors: [Field error in object 'user' on field 'password': rejected value [null]; codes [NotBlank.user.password,NotBlank.password,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [user.password,password]; arguments []; default message [password]]; default message [must not be blank]] [Field error in object 'user' on field 'password': rejected value [null]; codes [NotNull.user.password,NotNull.password,NotNull.java.lang.String,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [user.password,password]; arguments []; default message [password]]; default message [must not be null]] ]
-?[1;31m
-Start test 9?[0m
-2022-10-05 20:25:27.470  WARN 6388 --- [io-28852-exec-9] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity&lt;java.lang.Object&gt; account.controller.MainController.signupUser(account.entity.User): [Field error in object 'user' on field 'email': rejected value [johndoeacme.com]; codes [Email.user.email,Email.email,Email.java.lang.String,Email]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [user.email,email]; arguments []; default message [email],[Ljavax.validation.constraints.Pattern$Flag;@5009e267,^[a-zA-Z0-9_.+-]+@acme.com]; default message [must be a well-formed email address]] ]
-?[1;31m
-Start test 10?[0m
-2022-10-05 20:25:27.498  WARN 6388 --- [o-28852-exec-10] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity&lt;java.lang.Object&gt; account.controller.MainController.signupUser(account.entity.User): [Field error in object 'user' on field 'email': rejected value [johndoe@google.com]; codes [Email.user.email,Email.email,Email.java.lang.String,Email]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [user.email,email]; arguments []; default message [email],[Ljavax.validation.constraints.Pattern$Flag;@5009e267,^[a-zA-Z0-9_.+-]+@acme.com]; default message [must be a well-formed email address]] ]
-?[1;31m
-Start test 11?[0m
-User{name='John', email='JohnDoe@acme.com', password='PasswordForJanuary'}
-User{name='John', email='JohnDoe@acme.com', password='PasswordForFebruary'}
-User{name='John', email='JohnDoe@acme.com', password='PasswordForMarch'}
-User{name='John', email='JohnDoe@acme.com', password='PasswordForApril'}
-User{name='John', email='JohnDoe@acme.com', password='PasswordForMay'}
-User{name='John', email='JohnDoe@acme.com', password='PasswordForJune'}
-User{name='John', email='JohnDoe@acme.com', password='PasswordForJuly'}
-User{name='John', email='JohnDoe@acme.com', password='PasswordForAugust'}
-User{name='John', email='JohnDoe@acme.com', password='PasswordForSeptember'}
-User{name='John', email='JohnDoe@acme.com', password='PasswordForOctober'}
-User{name='John', email='JohnDoe@acme.com', password='PasswordForNovember'}
-User{name='John', email='JohnDoe@acme.com', password='PasswordForDecember'}
-?[1;31m
-Start test 12?[0m
-User{name='John', email='JohnDoe@acme.com', password='oMoa3VvqnLxW'}
-User{name='John', email='JohnDoe@acme.com', password='oMoa3VvqnLxW'}
-?[1;31m
-Start test 13?[0m
-User{name='John', email='JohnDoe@acme.com', password='oMoa3VvqnLxW'}
-?[1;31m
-Start test 14?[0m
-User{name='John', email='JohnDoe@acme.com', password='oMoa3VvqnLxW'}
-?[1;31m
-Start test 15?[0m
-User{name='John', email='johndoe@acme.com', password='oMoa3VvqnLxW'}
-?[1;31m
-Start test 16?[0m
-User{name='Max', email='maxmustermann@acme.com', password='ai0y9bMvyF6G'}
-User{name='Max', email='maxmustermann@acme.com', password='ai0y9bMvyF6G'}
-?[1;31m
-Start test 17?[0m
-User{name='Max', email='maxmustermann@acme.com', password='ai0y9bMvyF6G'}
-?[1;31m
-Start test 18?[0m
-User{name='Max', email='MaxMustermann@acme.com', password='ai0y9bMvyF6G'}
-?[1;31m
-Start test 19?[0m
-?[1;31m
-Start test 20?[0m
-?[1;31m
-Start test 21?[0m
-?[1;31m
-Start test 22?[0m
-?[1;31m
-Start test 23?[0m
-?[1;31m
-Start test 24?[0m
-?[1;31m
-Start test 25?[0m
-?[1;31m
-Start test 26?[0m
-?[1;31m
-Start test 27?[0m
-?[1;31m
-Start test 28?[0m
-?[1;31m
-Start test 29?[0m
-?[1;31m
-Start test 30?[0m
-?[1;31m
-Start test 31?[0m
-?[1;31m
-Start test 32?[0m
-?[1;31m
-Start test 33?[0m
-?[1;31m
-Start test 34?[0m
-?[1;31m
-Start test 35?[0m
-2022-10-05 20:25:58.012  INFO 6388 --- [       Thread-5] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2022-10-05 20:25:58.015  INFO 6388 --- [       Thread-5] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
-2022-10-05 20:25:58.033  WARN 6388 --- [       Thread-5] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [MVStore background writer D:/JetBrains Academy/new/Account Service/Account Service/service_db.mv.db] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
- java.base@17.0.2/java.lang.Object.wait(Native Method)
- app//org.h2.mvstore.MVStore$BackgroundWriterThread.run(MVStore.java:3768)
-2022-10-05 20:25:58.034  WARN 6388 --- [       Thread-5] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [HikariPool-1 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
- java.base@17.0.2/jdk.internal.misc.Unsafe.park(Native Method)
- java.base@17.0.2/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:252)
- java.base@17.0.2/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1672)
- java.base@17.0.2/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
- java.base@17.0.2/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
- java.base@17.0.2/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1062)
- java.base@17.0.2/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1122)
- java.base@17.0.2/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
- java.base@17.0.2/java.lang.Thread.run(Thread.java:833)
-2022-10-05 20:25:58.037  WARN 6388 --- [       Thread-5] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [H2-serialization] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
- java.base@17.0.2/jdk.internal.misc.Unsafe.park(Native Method)
- java.base@17.0.2/java.util.concurrent.locks.LockSupport.park(LockSupport.java:341)
- java.base@17.0.2/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(AbstractQueuedSynchronizer.java:506)
- java.base@17.0.2/java.util.concurrent.ForkJoinPool.unmanagedBlock(ForkJoinPool.java:3463)
- java.base@17.0.2/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:3434)
- java.base@17.0.2/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1623)
- java.base@17.0.2/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)
- java.base@17.0.2/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1062)
- java.base@17.0.2/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1122)
- java.base@17.0.2/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
- java.base@17.0.2/java.lang.Thread.run(Thread.java:833)
-2022-10-05 20:25:58.045  WARN 6388 --- [       Thread-5] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [H2-save] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
- java.base@17.0.2/jdk.internal.misc.Unsafe.park(Native Method)
- java.base@17.0.2/java.util.concurrent.locks.LockSupport.park(LockSupport.java:341)
- java.base@17.0.2/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(AbstractQueuedSynchronizer.java:506)
- java.base@17.0.2/java.util.concurrent.ForkJoinPool.unmanagedBlock(ForkJoinPool.java:3463)
- java.base@17.0.2/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:3434)
- java.base@17.0.2/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1623)
- java.base@17.0.2/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)
- java.base@17.0.2/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1062)
- java.base@17.0.2/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1122)
- java.base@17.0.2/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
- java.base@17.0.2/java.lang.Thread.run(Thread.java:833)
-2022-10-05 20:25:58.072  INFO 6388 --- [       Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-10-05 20:25:58.078  INFO 6388 --- [       Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2022-10-05 20:25:58.142  INFO 6388 --- [       Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-
-  .   ____          _            __ _ _
- /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
-( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
- \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
-  '  |____| .__|_| |_|_| |_\__, | / / / /
- =========|_|==============|___/=/_/_/_/
- :: Spring Boot ::                (v2.7.3)
-
-2022-10-05 20:25:58.274  INFO 6388 --- [    Test worker] account.AccountServiceApplication        : Starting AccountServiceApplication using Java 17.0.2 on Home-PC with PID 6388 (started by Home in D:\JetBrains Academy\new\Account Service\Account Service\task)
-2022-10-05 20:25:58.274  INFO 6388 --- [    Test worker] account.AccountServiceApplication        : No active profile set, falling back to 1 default profile: &quot;default&quot;
-2022-10-05 20:25:58.996  INFO 6388 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-10-05 20:25:59.016  INFO 6388 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 19 ms. Found 2 JPA repository interfaces.
-2022-10-05 20:25:59.214  INFO 6388 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 28852 (http)
-2022-10-05 20:25:59.216  INFO 6388 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-10-05 20:25:59.217  INFO 6388 --- [    Test worker] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
-2022-10-05 20:25:59.277  INFO 6388 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-10-05 20:25:59.278  INFO 6388 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 992 ms
-2022-10-05 20:25:59.348  INFO 6388 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
-2022-10-05 20:25:59.380  INFO 6388 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
-2022-10-05 20:25:59.381  INFO 6388 --- [    Test worker] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:../service_db'
-2022-10-05 20:25:59.461  INFO 6388 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-10-05 20:25:59.472  INFO 6388 --- [    Test worker] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-2022-10-05 20:25:59.624  INFO 6388 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-10-05 20:25:59.626  INFO 6388 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-10-05 20:25:59.837  INFO 6388 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@551bc2c6, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6b6b4177, org.springframework.security.web.context.SecurityContextPersistenceFilter@111ae918, org.springframework.security.web.header.HeaderWriterFilter@4dea763c, org.springframework.security.web.authentication.logout.LogoutFilter@1786e49f, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@8ae7e03, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@41fdb59c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5f386009, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@bf32f3f, org.springframework.security.web.session.SessionManagementFilter@26f50a28, org.springframework.security.web.access.ExceptionTranslationFilter@18f919ce, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4ba56bbe]
-2022-10-05 20:25:59.893  WARN 6388 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-10-05 20:26:00.322  INFO 6388 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
-2022-10-05 20:26:00.398  INFO 6388 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 28852 (http) with context path ''
-2022-10-05 20:26:00.408  INFO 6388 --- [    Test worker] account.AccountServiceApplication        : Started AccountServiceApplication in 2.196 seconds (JVM running for 48.117)
-?[1;31m
-Start test 36?[0m
-2022-10-05 20:26:00.459  INFO 6388 --- [io-28852-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-10-05 20:26:00.460  INFO 6388 --- [io-28852-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-10-05 20:26:00.463  INFO 6388 --- [io-28852-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
-?[1;31m
-Start test 37?[0m
-?[1;31m
-Start test 38?[0m
-?[1;31m
-Start test 39?[0m
-?[1;31m
-Start test 40?[0m
-?[1;31m
-Start test 41?[0m
-?[1;31m
-Start test 42?[0m
-?[1;31m
-Start test 43?[0m
-?[1;31m
-Start test 44?[0m
-?[1;31m
-Start test 45?[0m
-?[1;31m
-Start test 46?[0m
-?[1;31m
-Start test 47?[0m
-?[1;31m
-Start test 48?[0m
-?[1;31m
-Start test 49?[0m
-?[1;31m
-Start test 50?[0m
-?[1;31m
-Start test 51?[0m
-?[1;31m
-Start test 52?[0m
-?[1;31m
-Start test 53?[0m
-</pre>
+?[0;34m
+?[0m?[0;34m  .   ____          _            __ _ _
+?[0m?[0;34m /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+?[0m?[0;34m( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+?[0m?[0;34m \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+?[0m?[0;34m  '  |____| .__|_| |_|_| |_\__, | / / / /
+?[0m?[0;34m =========|_|==============|___/=/_/_/_/
+?[0m?[0;34m :: Spring Boot ::                (v2.7.3)
+?[0m?[0;34m
+?[0m?[0;34m2022-10-14 19:32:36.321  INFO 7172 --- [    Test worker] account.AccountServiceApplication        : Starting AccountServiceApplication using Java 17.0.2 on Home-PC with PID 7172 (started by Home in D:\JetBrains Academy\new\Account Service\Account Service\task)
+?[0m?[0;34m2022-10-14 19:32:36.327  INFO 7172 --- [    Test worker] account.AccountServiceApplication        : No active profile set, falling back to 1 default profile: &quot;default&quot;
+?[0m?[0;34m2022-10-14 19:32:40.406  INFO 7172 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+?[0m?[0;34m2022-10-14 19:32:40.549  INFO 7172 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 127 ms. Found 3 JPA repository interfaces.
+?[0m?[0;34m2022-10-14 19:32:42.295  INFO 7172 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 28852 (https)
+?[0m?[0;34m2022-10-14 19:32:42.327  INFO 7172 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+?[0m?[0;34m2022-10-14 19:32:42.328  INFO 7172 --- [    Test worker] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+?[0m?[0;34m2022-10-14 19:32:42.538  INFO 7172 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+?[0m?[0;34m2022-10-14 19:32:42.539  INFO 7172 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 5995 ms
+?[0m?[0;34m2022-10-14 19:32:42.843  INFO 7172 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+?[0m?[0;34m2022-10-14 19:32:43.869  INFO 7172 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+?[0m?[0;34m2022-10-14 19:32:43.913  INFO 7172 --- [    Test worker] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:../service_db'
+?[0m?[0;34m2022-10-14 19:32:46.455  INFO 7172 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+?[0m?[0;34m2022-10-14 19:32:46.661  INFO 7172 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.10.Final
+?[0m?[0;34m2022-10-14 19:32:47.300  INFO 7172 --- [    Test worker] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+?[0m?[0;34m2022-10-14 19:32:47.531  INFO 7172 --- [    Test worker] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+?[0m?[0;34m2022-10-14 19:32:49.620  INFO 7172 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+?[0m?[0;34m2022-10-14 19:32:49.633  INFO 7172 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+?[0m?[0;34m2022-10-14 19:32:51.049  INFO 7172 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@3531509c, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@23169374, org.springframework.security.web.context.SecurityContextPersistenceFilter@44a1ae4e, org.springframework.security.web.header.HeaderWriterFilter@2c02cf78, org.springframework.security.web.authentication.logout.LogoutFilter@3ef4a8fb, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@1390a43a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@193c810, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1ef7e4c7, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4f2b1a2f, org.springframework.security.web.session.SessionManagementFilter@319ea996, org.springframework.security.web.access.ExceptionTranslationFilter@759c53e5, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1f596988]
+?[0m?[0;34m2022-10-14 19:32:51.170  WARN 7172 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+?[0m?[0;34m2022-10-14 19:32:52.388  INFO 7172 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
+?[0m?[0;34m2022-10-14 19:32:53.359  INFO 7172 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 28852 (https) with context path ''
+?[0m?[0;34m2022-10-14 19:32:53.397  INFO 7172 --- [    Test worker] account.AccountServiceApplication        : Started AccountServiceApplication in 18.136 seconds (JVM running for 20.065)
+?[0m?[0;34mCN=accountant_service, OU=developer, O=JavaCorp, L=Chelyabinsk, ST=Chelyabinsk region, C=RU SHA256withRSA
+?[0m</pre>
 </span>
 </div>
 </div>
@@ -345,7 +133,7 @@ Start test 53?[0m
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 7.3.3</a> at 5 окт. 2022 г., 20:26:11</p>
+<a href="http://www.gradle.org">Gradle 7.3.3</a> at 14 окт. 2022 г., 19:32:54</p>
 </div>
 </div>
 </body>

@@ -10,8 +10,6 @@ import java.util.Map;
 import java.util.function.Function;
 
 public interface EmplPayrollsValidator extends Function<EmpSal, EmplPayrollsValidator.ValidationResult> {
-
-
     private static boolean isMonthCorrect(int month) {
         return month > 0 && month < 13;
     }
@@ -29,6 +27,7 @@ public interface EmplPayrollsValidator extends Function<EmpSal, EmplPayrollsVali
         }
         return -1;
     }
+
     static EmplPayrollsValidator isEmplUser(UserService userService) {
         return empSal -> userService.findUserByEmail(empSal.getEmployee()).isPresent() ? ValidationResult.SUCCESS :
                     ValidationResult.EMPL_NOT_USER;
@@ -38,6 +37,7 @@ public interface EmplPayrollsValidator extends Function<EmpSal, EmplPayrollsVali
         return empSal -> strMonthConvertToInt(empSal.getPeriod()) != -1 ? ValidationResult.SUCCESS :
                 ValidationResult.PERIOD_NOT_CORRECT;
     }
+
     static EmplPayrollsValidator isSalaryNotNegative() {
         return empSal -> empSal.getSalary() > -1 ? ValidationResult.SUCCESS :
                 ValidationResult.SALARY_NEGATIVE;
@@ -56,7 +56,6 @@ public interface EmplPayrollsValidator extends Function<EmpSal, EmplPayrollsVali
             return  result.equals(EmplPayrollsValidator .ValidationResult.SUCCESS) ? other.apply(empSal) : result;
         };
     }
-
 
     enum ValidationResult {
         SUCCESS,

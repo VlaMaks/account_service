@@ -9,7 +9,6 @@ import java.util.List;
 import java.util.function.Function;
 
 public interface UserPasswordValidator extends Function<String, UserPasswordValidator.ValidationResult> {
-
     List<String> arr = List.of("PasswordForJanuary", "PasswordForFebruary", "PasswordForMarch", "PasswordForApril",
             "PasswordForMay", "PasswordForJune", "PasswordForJuly", "PasswordForAugust",
             "PasswordForSeptember", "PasswordForOctober", "PasswordForNovember", "PasswordForDecember");

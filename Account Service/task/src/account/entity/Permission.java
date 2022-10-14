@@ -4,7 +4,8 @@ public enum Permission {
     CHANGE_PASS("change:pass"),
     READ_PAYMENT("read:payment"),
     WRITE_PAYMENT("write:payment"),
-    MANAGE_USER("manage:user");
+    MANAGE_USER("manage:user"),
+    READ_SECURITY_EVENTS("read:security:events");
 
     private final String permission;
 

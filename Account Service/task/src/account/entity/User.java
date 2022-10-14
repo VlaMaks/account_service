@@ -9,30 +9,28 @@ import javax.persistence.*;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
+import java.util.TreeSet;
 
 @Entity
 @Table(name = "users")
 public class User {
-
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private Long id;
-
     @Column(name = "name")
     @NotBlank
     @NotNull
     private String name;
-
     @Column(name = "last_name")
     @NotBlank
     @NotNull
     private String lastName;
-
     @Column(name = "email")
     @NotBlank
     @NotNull
@@ -43,36 +41,44 @@ public class User {
     @NotBlank
     @NotNull
     private String password;
-
-    /*@Column(name = "role")
-    @Enumerated(value = EnumType.STRING)
-    @JsonIgnore*/
-
-    @ElementCollection
-    //@NotNull
-   //@JsonIgnore
-    private Set<Role> roles;
-
-    /*@ManyToMany(cascade = {
-            CascadeType.PERSIST,
-            CascadeType.MERGE
-    })
-    @JoinTable(name = "user_groups",
-            joinColumns =@JoinColumn(name = "customer_id"),
-            inverseJoinColumns = @JoinColumn(name = "group_id"
-            ))
-    private Set<Group> userGroups= new HashSet<>();*/
+    @ElementCollection(fetch = FetchType.EAGER)
+    private List<Role> roles;
 
     @Enumerated(value = EnumType.STRING)
     @JsonIgnore
     @Column(name = "status")
     private Status status;
 
+    @Column(name = "failed_attempt")
+    @JsonIgnore
+    private int failedAttempt;
+
+    @Column(name = "lock_time")
+    @JsonIgnore
+    private LocalDateTime lockTime;
+
     public User(String name, String lastName, String email, String password) {
         this.name = name;
         this.lastName = lastName;
         this.email = email;
         this.password = password;
+        this.failedAttempt = 0;
+    }
+
+    public int getFailedAttempt() {
+        return failedAttempt;
+    }
+
+    public void setFailedAttempt(int failedAttempt) {
+        this.failedAttempt = failedAttempt;
+    }
+
+    public LocalDateTime getLockTime() {
+        return lockTime;
+    }
+
+    public void setLockTime(LocalDateTime lockTime) {
+        this.lockTime = lockTime;
     }
 
     public User() {
@@ -110,7 +116,7 @@ public class User {
         this.password = password;
     }
 
-    public Set<Role> getRoles() {
+    public List<Role> getRoles() {
         return roles;
     }
 
@@ -118,7 +124,7 @@ public class User {
         return status;
     }
 
-    public void setRole(Set<Role> roles) {
+    public void setRole(List<Role> roles) {
         this.roles = roles;
     }
 
